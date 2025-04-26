@@ -15,6 +15,11 @@ app.use(express.json());
 
 app.use('/api/volunteers', volunteersRoutes);
 
+// Rota de teste
+app.get('/', (req, res) => {
+    res.send('API ONG - Online e conectada ao MongoDB!');
+  });
+
 // Conexão com o MongoDB utilizando Mongoose
 mongoose.connect(process.env.MONGODB_URI)
     .then(() => {

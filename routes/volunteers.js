@@ -73,7 +73,7 @@ router.delete("/:id", async (req, res) => {
         }
 
         // Deleta o voluntário
-        await existingVolunteer.remove();
+        await Volunteer.findByIdAndDelete(id);
         return res.status(200).json({ message: "Voluntário deletado com sucesso." });
     } catch (error) {
         console.error("Erro ao deletar voluntário:", error);
