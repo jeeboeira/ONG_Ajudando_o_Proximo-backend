@@ -2,7 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import volunteersRoutes from './routes/volunteers.js';
+import volunteersRoutes from './src/routes/volunteers.js';
 
 dotenv.config();                    // Carrega variáveis de ambiente
 
